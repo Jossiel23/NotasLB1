@@ -1,0 +1,120 @@
+﻿@model NotasLB1.Models.Notas
+@{
+    ViewData["Title"] = "Notas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Notas</h1>
+<div class="color">
+    <form asp-controller="Home" asp-action="Notas">
+        <div class="card">
+           
+           <label>Nombre Completo</label>
+
+                @if (ViewBag.DatoN1V == 0)
+            {
+
+                <input type="text" asp-for="Nombre" placeholder="Escribe el nombre completo" class="form-control" min="0" max="1000000000" />
+
+
+            }
+            else
+            {
+                <input type="text" asp-for="Nombre"placeholder="Escribe el nombre completo"   class="form-control" />
+            }
+
+             <label> Laboratorio 1</label>
+
+            @if (ViewBag.DatoN1V == 0)
+            {
+
+                <input type="number" asp-for="Lbuno" placeholder="Escribe la nota del primer Laboratorio" class="form-control" min="0" max="1000000000" />
+
+
+            }
+            else
+            {
+                <input type="number" asp-for="  Lbuno"placeholder="Escribe la nota del primer Laboratorio"   class="form-control" />
+            }
+
+              <label>Parcial 1</label>
+
+               @if (ViewBag.DatoN1V == 0)
+            {
+
+                <input type="number" asp-for="Pcuno" placeholder="Escribe la nota del primer Parcial" class="form-control" min="0" max="1000000000" />
+
+
+            }
+            else
+            {
+                <input type="number" asp-for="Pcuno"placeholder="Escribe la nota del primer Parcial"   class="form-control" />
+            }
+
+              <label> Laboratorio 2</label>
+
+               @if (ViewBag.DatoN1V == 0)
+            {
+
+                <input type="number" asp-for="Lbdos" placeholder="Escribe la nota del segundo Laboratorio" class="form-control" min="0" max="1000000000" />
+
+
+            }
+            else
+            {
+                <input type="number" asp-for=" Lbdos"placeholder="Escribe la nota del segundo Laboratorio "   class="form-control" />
+            }
+
+              <label> Parcial 2</label>
+
+               @if (ViewBag.DatoN1V == 0)
+            {
+
+                <input type="number" asp-for="Pcdos" placeholder="Escribe la nota del segundo Parcial" class="form-control" min="0" max="1000000000" />
+
+
+            }
+            else
+            {
+                <input type="number" asp-for="  Pcdos"placeholder="Escribe la nota del segundo Parcial"   class="form-control" />
+            }
+
+          
+              <label> Laboratorio 3</label>
+
+            @if (ViewBag.DatoN2V == 0)
+            {
+
+                <input type="number" asp-for="  Lbtres"placeholder="Escribe la nota del tercer Laboratorio"  class="form-control" min="0" max="1000000000" />
+
+
+            }
+            else
+            {
+                <input type="number" asp-for="Lbtres " placeholder="Escribe la nota del tercer Laboratorio" class="form-control" />
+            }
+
+              <label> Parcial 3</label>
+
+               @if (ViewBag.DatoN1V == 0)
+            {
+
+                <input type="number" asp-for="Pctres" placeholder="Escribe la nota del tercer Parcial" class="form-control" min="0" max="1000000000" />
+
+
+            }
+            else
+            {
+                <input type="number" asp-for="Pctres"placeholder="Escribe la nota del tercer Parcial"   class="form-control" />
+            }
+
+
+            <button class="btn btn-primary">Calcular Promedio</button>
+        </div>
+
+
+        <label>Notas</label>
+        <label> @ViewBag.Nombre </label>
+        <label> @ViewBag.Respuestanota </label>
+        </form>
+        </div>
